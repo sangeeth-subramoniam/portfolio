@@ -1,0 +1,87 @@
+users :
+	picture
+	profile
+	firstname
+	lastname
+	age
+	sex
+	dob
+
+food : 
+	dish name
+	description
+	availability
+	
+rooms : 
+	number	
+	name
+	meta information
+	pictures
+
+Films:
+	name
+	dp
+	desc
+	duration
+	genre
+	othersmeta
+
+staffs ::
+	user = foreign key
+	dp 
+	designation
+	desc
+	available or not
+	contact_info
+
+
+customer : 
+	user = foreignkey
+	room = foreignkey
+	services = foreignkey
+	chekin date time
+	exit date time
+	room
+	description
+	
+restaurant reservation:
+	customer
+	time
+	specifications
+
+
+food order :
+	customer
+	food = foreignkey food
+	quantity = 
+	extra requirements
+
+
+Movies : 
+	customer
+	film = foreignkey(film)
+	time
+	food if any
+	deesc
+
+scuba:
+	customer
+	starttime
+
+weather updates:
+	api
+
+call staff:
+	staff: foreign key staff
+	
+	
+
+
+
+
+
+	
+	
+
+	
+	
