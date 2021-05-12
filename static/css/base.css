@@ -1,0 +1,17 @@
+a:hover{
+    text-decoration: none;
+}
+
+.jb1{
+    color: black;
+}
+
+.jb1:hover{
+    background-color:black;
+    color: white;
+    transform: scale(1.3);
+}
+
+.jbtext{
+    font-size: 40px;
+}
