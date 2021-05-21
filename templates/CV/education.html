@@ -4,13 +4,13 @@
 
 {% block title %}
 
-PORTFOLIO
+EDUCATION
 
 {% endblock %}
 
 {% block body %}
 
-<h1 style="text-align: center; font-size: 100px;">PORTFOLIO</h1>
+<h1 style="text-align: center; font-size: 100px;">EDUCATION</h1>
 
 
     <div class="container" style="border: 5px solid black; padding:50px; margin-top:150px">
@@ -18,9 +18,9 @@ PORTFOLIO
 
 
         <div class="col-md-5" style="margin:20px">
-            <a href="{% url 'CV:education' %}">
+            <a href="{% url 'CV:schooldetail' %}">
                 <div class="jumbotron jb1"  style="border: 4px solid black;">
-                    <b class="jbtext">EDUCATION</b>
+                    <b class="jbtext">SCHOOL EDUCATION</b>
                 </div>
             </a>
         </div>
@@ -28,28 +28,12 @@ PORTFOLIO
         <div class="col-md-5" style="margin:20px">
             <a href="{% url 'homepage:home' %}">
                 <div class="jumbotron jb1" style="border: 4px solid black;">
-                    <b class="jbtext">WORK</b>
+                    <b class="jbtext">UNIVERSITY EDUCATION</b>
                 </div>
             </a>
         </div>
 
-        <div class="col-md-5" style="margin:20px" >
-            <a href="{% url 'homepage:home' %}">
-                <div class="jumbotron jb1" style="border: 4px solid black;">
-                    <b class="jbtext">SKILL SET</b>
-                </div>
-            </a>
-        </div>
         
-        <div class="col-md-5" style="margin:20px">
-            <a href="{% url 'homepage:home' %}">
-                <div class="jumbotron jb1" style="border: 4px solid black;">
-                    <b class="jbtext">OTHERS</b>
-                </div>
-            </a>
-        </div>
-
-
     </div>
 
 
