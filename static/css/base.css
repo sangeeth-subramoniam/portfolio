@@ -1,17 +1,131 @@
-a:hover{
-    text-decoration: none;
+body{
+    display: visible;
 }
 
-.jb1{
+.top{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    height: 70px;
+    width: 100%;
+    z-index: 2;
+    background-color: white;
+    position: fixed;
+    box-shadow: 0px 01px rgb(233, 233, 233);
+}
+
+.logo-text{
+    color: black;
+    margin-top: 20px;
+    margin-left: 15px;
+}
+
+
+.leftpane{
+    display: visible;
+    background-color: black;
+    width: 20%;
+    height: 100%;
+    position: fixed;
+    margin-top: 10px;
+    z-index: 1;
+    
+}
+
+.left-content{
+    margin-top: 80px;
+}
+
+.profile-image{
+    margin-top: 20px;
+    width: 50%;
+    margin-left: 25%;
+
+    
+    border: 8px solid #2c2f3f;
+    vertical-align: middle;
+}
+
+.rounded-circle{
+    border-radius: 50%!important;
+}
+
+.img-fluid{
+    max-width: 100%;
+    height: 10em;
+}
+
+.underpic-name{
+    color: white;
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    font-weight: 600;
+    margin-top: 4px;
+}
+
+.social{
+    width: 100%;
+    text-align: center;
+    margin: 20px 0px;
+    margin-bottom: 40px;
+}
+
+.round-icons{
+    display: inline-block;
+    margin: 2px;
+    border-radius: 60px;
+    box-shadow: 0px 0px 2px #888;
+    padding: 0.5em 0.6em;
+    color: white;
+}
+
+.round-icons:hover{
+    background-color: white;
     color: black;
 }
 
-.jb1:hover{
-    background-color:black;
-    color: white;
-    transform: scale(1.3);
+.content-list{
+    list-style-type: none;
 }
 
-.jbtext{
-    font-size: 40px;
+.content-list-items{
+    margin: 15px;
+    color: white;
+}
+
+.copyright-warning{
+    width: 100%;
+    margin-top: 25px;
+    margin-bottom: 1px;
+    text-align: center;
+    color: white;
+    opacity: 0.9;
+    
+}
+
+.designed-by{
+    width: 100%;
+    margin: 0px;
+    text-align: center;
+    font-size: small;
+    color: white;
+}
+
+
+
+
+
+
+
+
+.rightpane{
+    height: 100%;
+    width: 80%;
+    background-color: white;
+    margin-top: 0px;
+    margin-left: 20%;
+    padding: 20px;
+}
+
+.right-content{
+    margin-top: 70px;
 }
