@@ -1,0 +1,297 @@
+body{
+    display: visible;
+}
+
+.top{
+    display: visible;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    min-height: 10%;
+    width: 100%;
+    z-index: 2;
+    background-color: white;
+    position: fixed;
+    left: 0;
+    top: 0;
+    box-shadow: 0px 01px rgb(233, 233, 233);
+}
+
+.leftpane{
+    display: visible;
+    margin-top: 5%;
+    background-color: black;
+    width: 20%;
+    min-width: 20%;
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    overflow-y: scroll;
+    padding: 1%;
+    
+}
+
+
+.rightpane{
+    margin-top: 5%;
+    height: 99%;
+    width: 80%;
+    background-color: white;
+    margin-left: 20%;
+    margin-right: 0% !important;
+    padding: 1%;
+    text-align: center;
+    position: fixed;
+    z-index: 1;
+}
+
+
+.logo-text{
+    color: black;
+    margin-top: 20px;
+    margin-left: 15px;
+}
+
+
+
+
+.left-content{
+    margin-top: 0%;
+}
+
+.profile-image{
+    margin-top: 0.5em;
+    width: 40%;
+    margin-left: 30%;
+
+    
+    border: 8px solid #2c2f3f;
+}
+
+.profile-image:hover{
+    border: 8px solid white;
+}
+
+.rounded-circle{
+    border-radius: 50%!important;
+}
+
+.img-fluid{
+    max-width: 100%;
+    height: 7em;
+}
+
+.underpic-name{
+    color: white;
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    font-weight: 400;
+    margin-top: 0.5em;
+    margin-bottom: 0px;
+    text-transform: uppercase;
+}
+
+.social{
+    width: 100%;
+    text-align: center;
+    margin: 20px 0px;
+    margin-bottom: 3em;
+}
+
+.round-icons{
+    display: inline-block;
+    margin: 2px;
+    border-radius: 60px;
+    box-shadow: 0px 0px 2px #888;
+    padding: 0.5em 0.6em;
+    color: white;
+}
+
+.round-icons:hover{
+    background-color: white;
+    color: black;
+}
+
+.content-list-anchors{
+    text-decoration: none !important;
+}
+
+.content-list{
+    list-style-type: none;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+.content-list-items-icons{
+    margin-right: 1em;
+    margin-left: 0em;
+}
+
+.content-list-items{
+    width: 80%;
+    margin-left: 10%;
+    color: rgba(255, 255, 255, 0.405);
+
+}
+
+.content-list-items:hover{
+    color: white;
+}
+
+.content-list-items-text{
+    font-size: 1.5rem;
+}
+
+.copyright{
+    width: 90%;
+    margin-left: 4%;
+    margin-top: 35%;
+    margin-bottom: 10%;
+    text-align: center;
+    border: 1px solid white;   
+    padding: 0.1em; 
+}
+
+.copyright-warning{
+    width: 100%;
+    margin-top: 0em;
+    margin-bottom: 1px;
+    text-align: center;
+    color: white;
+    font-size: min(1.2em,17px);
+    opacity: 0.9;
+    
+}
+
+.designed-by{
+    width: 100%;
+    margin: 0px;
+    text-align: center;
+    font-size: min(1em, 12px);
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+.right-content{
+    margin: 0em;
+    padding: 1%;
+    border: 1px solid black;
+}
+
+
+
+
+
+
+
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 1145px) {    
+
+    .leftpane{
+        min-width: 35%;
+        height: 96%;
+        margin-top: 10%;
+    }
+
+
+    .left-content{
+        margin-top: 10%;
+        border: 1px solid yellow;
+        height: 90%;
+    }
+
+    .profile-image{
+        width: 60%;
+        margin-left: 20%;
+        
+        border: 6px solid #2c2f3f;
+    }
+    
+    .profile-image:hover{
+        border: 6px solid white;
+    }
+        
+    .img-fluid{
+        height: 6em;
+    }
+
+    .underpic-name{
+        font-weight: 100;
+        margin-top: 0.4em;
+    }
+    
+    .social{
+        margin: 10px 0px;
+        margin-bottom: 1.5em;
+    }
+    
+    .round-icons{
+        margin: 0.1em;
+    }
+    
+    .round-icons:hover{
+        background-color: white;
+        color: black;
+    }
+
+
+    .content-list-items{
+        width: 100%;
+        margin-left: 10%;
+        color: rgba(255, 255, 255, 0.405);
+    
+    }
+        
+    .content-list-items-icons{
+        margin-right: 0em;
+        margin-left: 1em;
+        font-size: 1em;
+    }
+
+    .content-list-items-text{
+        font-size: 1.3em;
+    }
+    
+    .content-list-items{
+        margin: 0em;
+        margin-bottom: 1.5em;
+    }
+
+    
+    .copyright-warning{
+        font-size: min(1.2em,12px);      
+    }
+    
+    .designed-by{
+        font-size: min(1em, 12px);
+    }
+
+
+    
+    
+    .rightpane{
+        height: 100%;
+        width: 65%;
+        background-color: white;
+        margin-top: 0px;
+        margin-left: 35%;
+        padding: 2%;
+        text-align: center;
+        border: 1px solid orange;
+    }
+    
+    .right-content{
+        margin-top: 70px;
+        border: 1px solid black;
+    }
+
+}

@@ -3,19 +3,96 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
-    <title>{% block title %} base {%endblock%}</title>
+    <title>{% block title %}  {%endblock%}</title>
 
     
     
 </head>
 <body>
-{% block body %}
+<div class="nav-container">
+    <a href="{% url 'CV:home' %}" class="nav-homepage"><h2 class="nav-title">Sangeeth <span class="title-secondname">Subramoniam</span></h2></a>
+    <button class="btn btn-primary nav-change-language"> Change To JP </button>
+</div>
+<div class="hero">
+    <div class="row">
+        <div class="col-lg-3 left-pane">
+            <div class="left-content">
+                <img class="profile-image img-fluid rounded-circle" src="{% static 'sangeeth2.jpg' %}" alt="broken">
+            
+                <div class="underprofilepic">
+                    <h4 class="underpic-name">Sangeeth</h4>
+                </div>
+                <div class="container social">
+                    <a href="#"><i class="fab fa-twitter round-icons"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in round-icons"></i></a>
+                    <a href="#"><i class="fab fab fa-instagram round-icons"></i></a>
+                    <a href="#"><i class="fab fa-github round-icons"></i></a>
+                    <a href="#"><i class="fab fa-stack-overflow round-icons"></i></a>
+                </div>
+    
+                <div class="left-headings">
+                    <ul class="content-list">
+                        <a href="{% url 'CV:about' %}" class="content-list-anchors"><li class="content-list-items"><h4 class="content-list-items-text"><i class="far fa-user-circle content-list-items-icons"></i> About </h4> </li></a>
+                        <a href="{% url 'CV:linktree' %}" class="content-list-anchors"><li class="content-list-items"><h4 class="content-list-items-text"><i class="fas fa-link content-list-items-icons"></i> Link Tree </h4> </li></a>
+                        <a href="{% url 'CV:resume' %}" class="content-list-anchors"><li class="content-list-items"><h4 class="content-list-items-text"><i class="fas fa-file content-list-items-icons"></i> Resume </h4> </li></a>
+                        <a href="{% url 'CV:projects' %}" class="content-list-anchors"><li class="content-list-items"><h4 class="content-list-items-text"><i class="fas fa-project-diagram content-list-items-icons"></i> Projects </h4> </li></a>
+                        <a href="{% url 'CV:others' %}" class="content-list-anchors"><li class="content-list-items"><h4 class="content-list-items-text"><i class="fab fa-angellist content-list-items-icons"></i> Others </h4> </li></a>
+                    </ul>
+                </div>
+    
+                <div class="copyright">
+                    <span class="designed-by" >Designed by : Sangeeth</span>
+                    <span class="sangeeth-wink"> <i class="far fa-smile-wink"></i> </span>
+                </div>
+                
+            </div>
+        </div>
 
 
-{% endblock %}   
+        <div class="col-lg-9 right-pane">
+            
+            <div class="mininav">
+                <table class="table table-bordered mininav-table">
+                    <tr>
+                        <th {% if page == 1 %} class="mininav-table-headers-active" {% else %} class="mininav-table-headers" {%endif%} onclick="document.location.href = '{% url "CV:about" %}'  ">
+                            About
+                        </th>
+
+                        <th {% if page == 2 %} class="mininav-table-headers-active" {% else %} class="mininav-table-headers" {%endif%} onclick="document.location.href = '{% url "CV:linktree" %}'  ">
+                            LinkTree 
+                        </th>
+
+                        <th {% if page == 3 %} class="mininav-table-headers-active" {% else %} class="mininav-table-headers" {%endif%} onclick="document.location.href = '{% url "CV:resume" %}'  ">
+                            Resume 
+                        </th>
+
+                        <th {% if page == 4 %} class="mininav-table-headers-active" {% else %} class="mininav-table-headers" {%endif%} onclick="document.location.href = '{% url "CV:projects" %}'  ">
+                            Projects 
+                        </th>
+
+                        <th {% if page == 5 %} class="mininav-table-headers-active" {% else %} class="mininav-table-headers" {%endif%} onclick="document.location.href = '{% url "CV:others" %}'  ">
+                            Others 
+                        </th>
+                    </tr>
+                </table>
+            </div>
+
+            {% block body %}
+            
+            {% endblock %}
+            
+        </div>
+    </div>
+</div>
+
+<script>
+    let red = () => {
+        
+    }
+</script>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>

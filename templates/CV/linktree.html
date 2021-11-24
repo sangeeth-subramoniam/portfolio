@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+
+PORTFOLIO - LinkTree
+
+{% endblock %}
+
+{% block body %}
+
+<div class="right-pane-header">
+    <h2>My Link <i class="fas fa-tree"></i>ree ! Lets get connected <i class="fas fa-smile"></i> </h2>
+</div>
+<br>
+<div class="container">
+    <div class="jumbotron linktree-jumbo">
+        <div class="row">
+            <div class="col-md-5 linktree-row">
+                <h4> <i class="fab fa-twitter fa-1x"> </i> TWITTER :</h4>
+            </div>
+            <div class="col-md-4 linktree-result">
+                {{twitter}}
+            </div>
+
+            <div class="col-md-3 linktree-result">
+                <div class="row">
+                    <div class="col-md-6">
+                        <button class="btn btn-sm btn-outline-primary cpybutton" onclick="copytext('{{twitter}}', 'twitter')"> Copy </button>
+                    </div>
+                    <div class="col-md-6 copiedlinkalert" id="twitter">
+                        <p> link copied ! </p>
+                    </div>
+                </div>               
+                
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="col-md-5 linktree-row">
+                <h4> <i class="fab fa-linkedin-in fa-1x "></i> LinkedIn :</h4>
+            </div>
+            <div class="col-md-4 linktree-result">
+                {{linkedin}}
+            </div>
+
+            <div class="col-md-3 linktree-result">
+                <div class="row">
+                    <div class="col-md-6">
+                        <button class="btn btn-sm btn-outline-primary cpybutton" onclick="copytext('{{linkedin}}', 'linkedin')"> Copy </button>
+                    </div>
+                    <div class="col-md-6 copiedlinkalert" id="linkedin">
+                        <p> link copied ! </p>
+                    </div>
+                </div>               
+                
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="col-md-5 linktree-row">
+                <h4> <i class="fab fab fa-instagram fa-1x "></i> Instagram :</h4>
+            </div>
+            <div class="col-md-4 linktree-result">
+                {{instagram}}
+            </div>
+            
+            <div class="col-md-3 linktree-result">
+                <div class="row">
+                    <div class="col-md-6">
+                        <button class="btn btn-sm btn-outline-primary cpybutton" onclick="copytext('{{instagram}}', 'instagram')"> Copy </button>
+                    </div>
+                    <div class="col-md-6 copiedlinkalert" id="instagram">
+                        <p> link copied ! </p>
+                    </div>
+                </div>               
+                
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="col-md-5 linktree-row">
+                <h4> <i class="fab fa-github fa-1x "> </i> Github :</h4>
+            </div>
+            <div class="col-md-4 linktree-result">
+                {{github}}
+            </div>
+            
+            <div class="col-md-3 linktree-result">
+                <div class="row">
+                    <div class="col-md-6">
+                        <button class="btn btn-sm btn-outline-primary cpybutton" onclick="copytext('{{github}}', 'github')"> Copy </button>
+                    </div>
+                    <div class="col-md-6 copiedlinkalert" id="github">
+                        <p> link copied ! </p>
+                    </div>
+                </div>               
+                
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="col-md-5 linktree-row">
+                <h4> <i class="fab fa-stack-overflow fa-1x "></i> StackOverflow :</h4>
+            </div>
+            <div class="col-md-4">
+                {{stackoverflow}}
+            </div>
+
+            <div class="col-md-3 linktree-result">
+                <div class="row">
+                    <div class="col-md-6">
+                        <button class="btn btn-sm btn-outline-primary cpybutton"  onclick="copytext('{{stackoverflow}}', 'stackoverflow')"> Copy </button>
+                    </div>
+                    <div class="col-md-6 copiedlinkalert" id="stackoverflow">
+                        <p> link copied ! </p>
+                    </div>
+                </div>               
+                
+            </div>
+        </div>
+
+    </div>
+</div>
+    
+<script>
+    let copytext = (link , copiedalertname) => {
+        var copyText = link;
+
+        navigator.clipboard.writeText(copyText);
+
+        copiedtext = document.getElementById(copiedalertname);
+
+        clear_all_displays = document.getElementsByClassName('copiedlinkalert')
+        for (var i = 0; i < clear_all_displays.length; i++ ) {
+            clear_all_displays[i].style.display = "none";
+        }
+            
+
+        if (copiedtext.style.display === "none" || copiedtext.style.display == "" ) {
+            copiedtext.style.display = "block";
+            setTimeout(function(){ copiedtext.style.display = "none"; }, 900);
+        }
+    }
+
+</script>
+
+{% endblock %}
