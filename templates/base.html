@@ -73,33 +73,6 @@
         </div>
 
 
-        <div class="col-lg-9 right-pane">
-            
-            <div class="mininav">
-                <table class="table table-bordered mininav-table">
-                    <tr>
-                        <th {% if page == 1 %} class="mininav-table-headers-active" {% else %} class="mininav-table-headers" {%endif%} onclick="document.location.href = '{% url "CV:about" %}'  ">
-                            About
-                        </th>
-
-                        <th {% if page == 2 %} class="mininav-table-headers-active" {% else %} class="mininav-table-headers" {%endif%} onclick="document.location.href = '{% url "CV:linktree" %}'  ">
-                            LinkTree 
-                        </th>
-
-                        <th {% if page == 3 %} class="mininav-table-headers-active" {% else %} class="mininav-table-headers" {%endif%} onclick="document.location.href = '{% url "CV:resume" %}'  ">
-                            Resume 
-                        </th>
-
-                        <th {% if page == 4 %} class="mininav-table-headers-active" {% else %} class="mininav-table-headers" {%endif%} onclick="document.location.href = '{% url "CV:projects" %}'  ">
-                            Projects 
-                        </th>
-
-                        <th {% if page == 5 %} class="mininav-table-headers-active" {% else %} class="mininav-table-headers" {%endif%} onclick="document.location.href = '{% url "CV:others" %}'  ">
-                            Others 
-                        </th>
-                    </tr>
-                </table>
-            </div>
 
             {% block body %}
             
