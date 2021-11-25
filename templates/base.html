@@ -13,7 +13,7 @@
 </head>
 <body>
 <div class="nav-container">
-    <a href="{% url 'CV:home' %}" class="nav-homepage"><h2 class="nav-title"><span class="title-firstname">Sangeeth</span> <span class="title-secondname">Subramoniam</span></h2></a>
+    <a href="{% url 'CV:about' %}" class="nav-homepage"><h2 class="nav-title"><span class="title-firstname">Sangeeth</span> <span class="title-secondname">Subramoniam</span></h2></a>
     {% if request.session.lang == "jp" %}
         <a href="{% url 'homepage:change_language' page %}"><button class="btn btn-outline-dark nav-change-language" > Change to English </button></a>
     {% else %}
