@@ -10,6 +10,7 @@ html{
     overflow-x: hidden;
 }
 
+
 ul{
     list-style-type: none;
     margin: 0;
@@ -21,7 +22,7 @@ a{
 }
 
 
-/* Defauuults over */
+/* Defaults over */
 
 
 
@@ -49,12 +50,29 @@ a{
 }
 
 .nav-title{
-    color: rgb(55, 183, 242);
+    color: rgb(0, 0, 0);
     padding:1%;
 }
 
+.nav-title:hover .title-firstname{
+    border-bottom: 4px dotted black;
+    transition-duration: .2s !important;
+}
+
+.nav-title:hover .title-secondname{
+    border-top: 4px dotted black;
+    transition-duration: .2s !important;
+}
+
+
+.title-firstname{
+    padding: 3px;
+    padding-bottom: 10px;
+}
+
 .title-secondname{
-    color: rgb(40, 138, 184);
+    color: rgb(121, 121, 121);
+    padding:3px
 }
 
 .hero{
@@ -64,6 +82,7 @@ a{
 }
 
 .left-pane{
+    position: relative;
     background-color: black;
     height: 102vh;
 }
@@ -84,7 +103,7 @@ a{
     width: 40%;
     height: 5%;
     margin-left: 30%;
-
+    cursor: pointer;
     border: 8px solid #2c2f3f;
 }
 
@@ -107,11 +126,25 @@ a{
     text-transform: uppercase;
 }
 
+.underpic-name{
+
+}
+
+.underpic-name:hover .underprofilepicnosmile,
+.underpic-name .underprofilepicsmile {
+    display: none;
+}
+.underpic-name:hover .underprofilepicsmile {
+    display: inline;
+}
+
+
+
 .social{
     width: 100%;
     text-align: center;
     margin-top: 3%;
-    margin-bottom: 7%;
+    margin-bottom: 10%;
 }
 
 .round-icons{
@@ -121,7 +154,7 @@ a{
     box-shadow: 0px 0px 2px #888;
     padding: 0.5em 0.6em;
     color: white;
-    font-size: 190%;
+    font-size: 145%;
 }
 
 .round-icons:hover{
@@ -157,25 +190,28 @@ a{
 }
 
 .content-list-items-text{
-    font-size: 170%;
-    margin-bottom: 3%;
+    font-size: 200%;
+    margin-bottom: 5%;
 }
 
 .copyright{
-    position: relative;
+    position: absolute;
     text-align: center;
     width: 100%;
     border-radius: 50px;
-    bottom:0px;
+    bottom:100px;
+    left: 0%;
     margin-top: 0px;
     font-size: min(1em, 120px);
     color: white;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
+    
 }
 
 .copyright:hover{
     animation: mymove 3s both;
 }
+
 
 @keyframes mymove {
     from {color: black;}
@@ -236,38 +272,56 @@ a{
     font-size: 14px;
 }
 
-
-
-
-/* linktree */
-
-.linktree-row , .linktree-result{
-    margin-bottom:20px;
+.sublist{
+    list-style-type: square;
+    margin-left: 10%;
+    padding: 1%;
 }
+
 
 /* About */
 
-.skillset-list{
-    list-style-type: square;
-    margin-left: 10%;
-    margin-top: 5px;
-}
-
 .right-pane-header-about{
-    margin-top: 3%;
-    margin-bottom: 0px;
+    margin-top: 4%;
+    margin-bottom: 1%;
 }
 
 .about-container{
     margin: 0px;
-    margin-top: -10px;
+    margin-top: 0px;
 }
 
 .about-jumbo{
     margin-top: 1%;
     margin-bottom: 1%;
-    padding: 3%;
+    padding: 5% 3%;
 }
+
+
+/* linktree */
+
+.right-pane-header-linktree{
+    margin-top : 4%;
+}
+
+.linktree-row , .linktree-result{
+    margin-bottom:2%;
+}
+
+.linktree-jumbo{
+    margin-top: 0px;
+    padding: 5% 3%;
+}
+
+.rightpane-subheader:hover .smileyhide, 
+.rightpane-subheader .smileyappear{
+    display: none;
+}
+.rightpane-subheader:hover .smileyappear {
+    display: inline;
+}
+
+
 
 /*  Project */
 
@@ -306,4 +360,38 @@ a{
 
 .others-jumbo{
     padding: 3%;
+}
+
+
+
+
+
+/* Media Queries */
+
+@media only screen and (max-width : 992px) {
+    .left-headings{
+        display: none;
+    }
+
+    .copyright{
+        bottom: 0px;
+    }
+}
+
+
+@media only screen and (max-width : 600px) {
+    .left-headings{
+        display: block;
+        margin-top: 0px;
+    }
+
+    .social{
+        margin-bottom: 3%;
+    }
+    
+    .linktree-jumbo{
+        text-align: center;
+        margin-bottom: 5%;
+    }
+
 }

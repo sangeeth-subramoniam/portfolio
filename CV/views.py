@@ -1,27 +1,33 @@
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 
 # Create your views here.
 def home(request):
-    return render(request,'cv/home.html')
+    return redirect('CV:about')
 
 def about(request):
     context = {
         "page" : 1,
 
     }
-    return render(request, 'cv/about.html' , context)
-
+    
+    if request.session['lang'] == "jp":
+        return render(request, 'cv/about_japanese.html' , context)
+    else:
+        return render(request, 'cv/about.html' , context)
 
 def linktree(request):
     context = {
         "page" : 2,
-        "twitter" : "https:www.twitter.com",
-        "linkedin" : "https://www.linkedin.com",
-        "instagram" : "https://www.instagram.com",
-        "github" : "https://www.github.com",
-        "stackoverflow" : "https://www.stackoverflow.com"
+        "twitter" : "https://twitter.com/sangeethsubram5?lang=en",
+        "linkedin" : "https://www.linkedin.com/in/sangeeth-subramoniam-358106127/?originalSubdomain=jp",
+        "instagram" : "https://www.instagram.com/sangeeth_subramoniam/?hl=en",
+        "github" : "https://github.com/sangeeth-subramoniam",
+        "stackoverflow" : "https://stackoverflow.com/users/8401179/sangeeth-subramoniam"
     }
-    return render(request,'cv/linktree.html' , context)
+    if request.session['lang'] == "jp":
+        return render(request,'cv/linktree_japanese.html' , context)
+    else:
+        return render(request,'cv/linktree.html' , context)
 
 
 def resume(request):
@@ -29,7 +35,10 @@ def resume(request):
         "page" : 3,
 
     }
-    return render(request, 'cv/resume.html' , context)
+    if request.session['lang'] == "jp":
+        return render(request, 'cv/resume_japanese.html' , context)
+    else:
+        return render(request, 'cv/resume.html' , context)
 
 
 def projects(request):
@@ -37,11 +46,17 @@ def projects(request):
         "page" : 4,
 
     }
-    return render(request, 'cv/projects.html' , context)
+    if request.session['lang'] == "jp":
+        return render(request, 'cv/projects_japanese.html' , context)
+    else:
+        return render(request, 'cv/projects.html' , context)
 
 def others(request):
     context = {
         "page" : 5,
 
     }
-    return render(request, 'cv/others.html' , context)
+    if request.session['lang'] == "jp":
+        return render(request, 'cv/others_japanese.html' , context)
+    else:
+        return render(request, 'cv/others.html' , context)
