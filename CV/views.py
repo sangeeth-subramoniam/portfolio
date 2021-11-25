@@ -15,7 +15,7 @@ def about(request):
     if request.session['lang'] == "jp":
         return render(request,'cv/about_japanese.html' , context)
     else:
-        return render(request,'cv/about.html' , context)
+        return render(request,'CV/about.html' , context)
 
 def linktree(request):
     if 'lang' not in request.session:
