@@ -13,7 +13,7 @@ def about(request):
     }
     
     if request.session['lang'] == "jp":
-        return render(request,'cv/about_japanese.html' , context)
+        return render(request,'CV/about_japanese.html' , context)
     else:
         return render(request,'CV/about.html' , context)
 
@@ -31,9 +31,9 @@ def linktree(request):
         "stackoverflow" : "https://stackoverflow.com/users/8401179/sangeeth-subramoniam"
     }
     if request.session['lang'] == "jp":
-        return render(request,'cv/linktree_japanese.html' , context)
+        return render(request,'CV/linktree_japanese.html' , context)
     else:
-        return render(request,'cv/linktree.html' , context)
+        return render(request,'CV/linktree.html' , context)
 
 
 def resume(request):
@@ -42,9 +42,9 @@ def resume(request):
 
     }
     if request.session['lang'] == "jp":
-        return render(request,'cv/resume_japanese.html' , context)
+        return render(request,'CV/resume_japanese.html' , context)
     else:
-        return render(request,'cv/resume.html' , context)
+        return render(request,'CV/resume.html' , context)
 
 
 def projects(request):
@@ -53,9 +53,9 @@ def projects(request):
 
     }
     if request.session['lang'] == "jp":
-        return render(request,'cv/projects_japanese.html' , context)
+        return render(request,'CV/projects_japanese.html' , context)
     else:
-        return render(request,'cv/projects.html' , context)
+        return render(request,'CV/projects.html' , context)
 
 def others(request):
     context = {
@@ -63,6 +63,6 @@ def others(request):
 
     }
     if request.session['lang'] == "jp":
-        return render(request, 'cv/others_japanese.html' , context)
+        return render(request, 'CV/others_japanese.html' , context)
     else:
-        return render(request, 'cv/others.html' , context)
+        return render(request, 'CV/others.html' , context)
