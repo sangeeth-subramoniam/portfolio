@@ -2,6 +2,7 @@ from django.shortcuts import redirect, render
 
 # Create your views here.
 def home(request):
+    #redirects to about
     return redirect('CV:about')
 
 def about(request):
