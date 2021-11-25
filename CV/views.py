@@ -13,11 +13,15 @@ def about(request):
     }
     
     if request.session['lang'] == "jp":
-        return render(request, 'cv/about_japanese.html' , context)
+        return render(request,'cv/about_japanese.html' , context)
     else:
-        return render(request, 'cv/about.html' , context)
+        return render(request,'cv/about.html' , context)
 
 def linktree(request):
+    if 'lang' not in request.session:
+        #setting initial session value to en
+        request.session['lang'] = 'en'
+
     context = {
         "page" : 2,
         "twitter" : "https://twitter.com/sangeethsubram5?lang=en",
@@ -38,9 +42,9 @@ def resume(request):
 
     }
     if request.session['lang'] == "jp":
-        return render(request, 'cv/resume_japanese.html' , context)
+        return render(request,'cv/resume_japanese.html' , context)
     else:
-        return render(request, 'cv/resume.html' , context)
+        return render(request,'cv/resume.html' , context)
 
 
 def projects(request):
@@ -49,9 +53,9 @@ def projects(request):
 
     }
     if request.session['lang'] == "jp":
-        return render(request, 'cv/projects_japanese.html' , context)
+        return render(request,'cv/projects_japanese.html' , context)
     else:
-        return render(request, 'cv/projects.html' , context)
+        return render(request,'cv/projects.html' , context)
 
 def others(request):
     context = {
