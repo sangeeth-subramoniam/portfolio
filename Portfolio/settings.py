@@ -25,7 +25,7 @@ MEDIA_DIR = os.path.join(BASE_DIR, 'media')
 SECRET_KEY = 'django-insecure-2x16zd**grj45!4w&l=tj821e2zqt5@wv^21-z&mmkg)d)15#)'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['sangeeth-profile.herokuapp.com' , '*']
 

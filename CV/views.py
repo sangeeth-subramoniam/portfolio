@@ -5,6 +5,11 @@ def home(request):
     return redirect('CV:about')
 
 def about(request):
+
+    if 'lang' not in request.session:
+        #setting initial session value to en
+        request.session['lang'] = 'en'
+
     context = {
         "page" : 1,
 
